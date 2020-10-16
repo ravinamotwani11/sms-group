@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+/*********************************    REACT TABLE CSS    *******************************/
+
+.re-white-bg {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+	    margin-top: 30px;
+}
+
+.ReactTable .rt-thead{
+  height: 44px;
+  background-color: #78909b;
+  color: #fff;
+}
+
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td{
+padding: 16px 5px !important;
+
+}
+
+.ReactTable .-sort-desc:before {
+
+  box-shadow: none !important;
+
+    content: "▼";
+    float: right;
+  
+}
+
+.ReactTable .-sort-asc:before {
+  box-shadow: none !important;
+
+    content: "▲";
+  float: right;
+  
+}
+.ReactTable{
+border: 1px solid #b6c6ce !important;
+}
+.ReactTable .rt-thead .rt-th.-sort-asc, .ReactTable .rt-thead .rt-td.-sort-asc {
+box-shadow: none !important;
+}
+.ReactTable .rt-thead .rt-th.-sort-desc, .ReactTable .rt-thead .rt-td.-sort-desc {
+box-shadow: none !important;
+}
+
+.ReactTable .rt-tbody .rt-tr-group {
+  border-bottom: solid 1px #b6c6ce !important;
+}
+
+.ReactTable .rt-th, .ReactTable .rt-td{
+white-space: unset !important;
+word-break: break-word !important;
+}
+
+/* **********************    date picker field css    ************************** */
+.datepicker {
+  display: flex;
+  width: 100%;
+  margin-left: 35%;
+}
+.pr{
+  padding-right: 10px;
+}
+
+
+
+  
