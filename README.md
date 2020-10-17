@@ -35,46 +35,46 @@ http://localhost:3000
 
 # CRUD
 To fetch all data, hit the following URL.  
-method: GET
+method: GET  
 URL: http://localhost:8010/sms-group/fetchCities  
 
-To fetch data from by id,hit the following URL.  
+To fetch data by id,hit the following URL.  
 method: GET  
 URL: http://localhost:8010/sms-group/fetchCities?id=<id>  
 
-To add new record, use POST method and hit the following URL.  
+To add new record, hit the following URL.  
 method: POST  
 URL: http://localhost:8010/sms-group/add  
-Payload/Body: [{
-"id": "1001",
-"city": "Tangxi",
-"status": "Seldom",
-"start_date": "10/16/2020",
-"end_date": "10/17/2020",
-"color": "#7ed096",
-"price": "95.34"
+Payload/Body: [{  
+"id": "1001",  
+"city": "Tangxi",  
+"status": "Seldom",  
+"start_date": "10/16/2020",  
+"end_date": "10/17/2020",  
+"color": "#7ed096",  
+"price": "97.35"  
 }
 ] 
   
   
-To update existing record, hit the following URL. 
+To update existing record, hit the following URL.  
 method: PUT  
 URL: http://localhost:8010/sms-group/update   
-Payload/Body: [{
-"id": "1001",
-"city": "Tangxi",
-"status": "Seldom",
-"start_date": "10/16/2020",
-"end_date": "10/17/2020",
-"color": "#7ed096",
-"price": "98.35"
+Payload/Body: [{  
+"id": "1001",  
+"city": "Tangxi",  
+"status": "Seldom",  
+"start_date": "10/16/2020",  
+"end_date": "10/17/2020",  
+"color": "#7ed096",  
+"price": "98.35"  
 }
 ]  
   
 To delete any record, hit the following URL.  
 method: DELETE  
 URL: http://localhost:8010/sms-group/delete  
-Payload/Body: {
+Payload/Body: {  
 "id": 1001
 }
  
