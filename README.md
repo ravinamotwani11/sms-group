@@ -38,7 +38,7 @@ To fetch all data, hit the following URL.
 method: GET  
 URL: http://localhost:8010/sms-group/fetchCities  
 
-To fetch data by id,hit the following URL.  
+To fetch data by id, hit the following URL.  
 method: GET  
 URL: http://localhost:8010/sms-group/fetchCities?id=<id>  
 
@@ -75,7 +75,7 @@ To delete any record, hit the following URL.
 method: DELETE  
 URL: http://localhost:8010/sms-group/delete  
 Payload/Body: {  
-"id": 1001
+"id": 1001  
 }
  
 
