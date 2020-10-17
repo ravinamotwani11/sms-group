@@ -228,8 +228,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>thor-authentication</finalName>
-					<mainClass>in.securitymgt.AuthenticationApplication</mainClass>
+					<finalName>sms-group</finalName>
+					<mainClass>com.user.userProfile.UserProfileApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

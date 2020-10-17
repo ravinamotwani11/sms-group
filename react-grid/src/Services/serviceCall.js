@@ -9,7 +9,7 @@ export const serviceCall = {
 
 function fetchList(fn) {
 
-    var url = "http://localhost:8010/sms-group/fetchCities?id=";
+    var url = "http://application:8010/sms-group/fetchCities?id=";
 
     return new RestDataSource(url, null, fn).GetData((res) => fn(res));
 
@@ -17,7 +17,7 @@ function fetchList(fn) {
 
 function addRecord(payload, fn) {
 
-    var url = "http://localhost:8010/sms-group/add";
+    var url = "http://application:8010/sms-group/add";
 
     return new RestDataSource(url, null, fn).Store(payload, (res) => fn(res));
 
@@ -25,7 +25,7 @@ function addRecord(payload, fn) {
 
 function editRecord(payload, fn) {
 
-    var url = "http://localhost:8010/sms-group/update";
+    var url = "http://application:8010/sms-group/update";
 
     return new RestDataSource(url, null, fn).Update(payload, (res) => fn(res));
 
@@ -33,7 +33,7 @@ function editRecord(payload, fn) {
 
 function deleteRecord(id, fn) {
 
-    var url = "http://localhost:8010/sms-group/delete";
+    var url = "http://application:8010/sms-group/delete";
 
     return new RestDataSource(url, null, fn).Delete(id, (res) => fn(res));
 
