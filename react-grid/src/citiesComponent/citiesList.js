@@ -321,7 +321,7 @@ class CityList extends Component {
                                                     <Field
                                                         type="text"
                                                         name="start_date"
-                                                        placeholder="Start Date"
+                                                        placeholder="MM/DD/YYYY"
                                                         className="form-control"
                                                     />
 
@@ -335,7 +335,7 @@ class CityList extends Component {
                                                     <Field
                                                         type="text"
                                                         name="end_date"
-                                                        placeholder="End Date"
+                                                        placeholder="MM/DD/YYYY"
                                                         className="form-control"
                                                     />
 
