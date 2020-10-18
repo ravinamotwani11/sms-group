@@ -77,7 +77,8 @@ Payload/Body:
     
 To update existing record, hit the following URL.  
 method: PUT  
-URL: ```
+URL: 
+```
 http://localhost:8010/sms-group/update
 ```  
   
