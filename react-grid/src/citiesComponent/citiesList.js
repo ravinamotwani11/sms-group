@@ -95,7 +95,7 @@ class CityList extends Component {
 
         if (this.state.updateState === true) {
             var postvalues =
-                [
+                
                     {
                         "id": this.state.id,
                         "city": values.city,
@@ -105,8 +105,7 @@ class CityList extends Component {
                         "color": values.color,
                         "price": values.price,
                     }
-                ]
-
+                
             serviceCall.editRecord(postvalues, (response) => {
 
                 if (response.data.reasonCode === "200") {
