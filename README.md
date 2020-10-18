@@ -26,7 +26,8 @@ docker-compose up
 Before going to run web UI and performing CRUD operation, user must load data into the database.  
 Hit the following URL. 
 method: POST 
-URL: ```
+URL: 
+```
 http://localhost:8010/sms-group/insertJSON
 ```  
 For example, open postman=> select POST method => type the above URL=> hit send button=> You will get success response  
@@ -41,23 +42,27 @@ http://localhost:3000
 # CRUD
 To fetch all data, hit the following URL.  
 method: GET  
-URL: ``` 
+URL: 
+``` 
 http://localhost:8010/sms-group/fetchCities
 ```  
   
 To fetch data by id, hit the following URL.  
 method: GET  
-URL: ```
+URL: 
+```
 http://localhost:8010/sms-group/fetchCities?id=<id>
 ```  
   
 To add new record, hit the following URL.  
 method: POST  
-URL: ```
+URL: 
+```
 http://localhost:8010/sms-group/add
 ```
  
-Payload/Body: ```
+Payload/Body: 
+```
 [{  
 "city": "Tangxi",  
 "status": "Seldom",  
@@ -76,7 +81,8 @@ URL: ```
 http://localhost:8010/sms-group/update
 ```  
   
-Payload/Body: ```
+Payload/Body: 
+```
 {  
 "id": "1001",  
 "city": "Tangxi",  
@@ -91,11 +97,13 @@ Payload/Body: ```
     
 To delete any record, hit the following URL.  
 method: DELETE  
-URL: ```
+URL: 
+```
 http://localhost:8010/sms-group/delete
 ```  
  
-Payload/Body: ```
+Payload/Body: 
+```
 {  
 "id": 1001  
 }
