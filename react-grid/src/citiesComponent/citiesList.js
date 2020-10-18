@@ -353,11 +353,6 @@ class CityList extends Component {
                                                         className="form-control"
                                                     />
 
-                                                    <ErrorMessage
-                                                        component="div"
-                                                        name="price"
-                                                        className="text-danger"
-                                                    />
                                                 </div>
 
                                                 <div>
