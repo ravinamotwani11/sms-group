@@ -87,21 +87,20 @@ public class UserController {
 
 	@CrossOrigin(origins = "*")
 	@PutMapping("/update")
-	public ResponseEntity<BaseResponse<User>> updateRecord(HttpServletRequest request, @RequestBody List<User> user)
+	public ResponseEntity<BaseResponse<User>> updateRecord(HttpServletRequest request, @RequestBody User user)
 			throws Exception {
 
 		ResponseEntity<BaseResponse<User>> userResponse = null;
 
 		BaseResponse<User> br = new BaseResponse<>();
 
-		for (User userData : user) {
 			try {
 				List<String> responseList = new ArrayList<>();
 				String erroResponse = null;
 				User userDetails = new User();
 
 				// check id is null.
-				if ((Long) userData.getId() == null || userData.getId() == 0) {
+				if ((Long) user.getId() == null || user.getId() == 0) {
 
 					erroResponse = CommonConstants.ID_NOT_NULL;
 					br.setStatus(CommonConstants.FAIL);
@@ -111,38 +110,40 @@ public class UserController {
 				}
 				if (responseList.isEmpty()) {
 					User userRecord;
-					userRecord = userService.updateRecord(request, userData.getId());
+					
+					//service call to check whether id is present in the database or not
+					userRecord = userService.updateRecord(request, user.getId());
 					if (userRecord != null) {
 
-						userDetails.setId(userData.getId());
+						userDetails.setId(user.getId());
 
-						if (userData.getCity() != null) {
-							userDetails.setCity(userData.getCity());
+						if (user.getCity() != null) {
+							userDetails.setCity(user.getCity());
 						} else {
 							userDetails.setCity(userRecord.getCity());
 						}
-						if (userData.getColor() != null) {
-							userDetails.setColor(userData.getColor());
+						if (user.getColor() != null) {
+							userDetails.setColor(user.getColor());
 						} else {
 							userDetails.setColor(userRecord.getColor());
 						}
-						if (userData.getEnd_date() != null) {
-							userDetails.setEnd_date(userData.getEnd_date());
+						if (user.getEnd_date() != null) {
+							userDetails.setEnd_date(user.getEnd_date());
 						} else {
 							userDetails.setEnd_date(userRecord.getEnd_date());
 						}
-						if (userData.getPrice() != null) {
-							userDetails.setPrice(userData.getPrice());
+						if (user.getPrice() != null) {
+							userDetails.setPrice(user.getPrice());
 						} else {
 							userDetails.setPrice(userRecord.getPrice());
 						}
-						if (userData.getStart_date() != null) {
-							userDetails.setStart_date(userData.getStart_date());
+						if (user.getStart_date() != null) {
+							userDetails.setStart_date(user.getStart_date());
 						} else {
 							userDetails.setStart_date(userRecord.getStart_date());
 						}
-						if (userData.getStatus() != null) {
-							userDetails.setStatus(userData.getStatus());
+						if (user.getStatus() != null) {
+							userDetails.setStatus(user.getStatus());
 						} else {
 							userDetails.setStatus(userRecord.getStatus());
 						}
@@ -174,8 +175,7 @@ public class UserController {
 				e.printStackTrace();
 
 			}
-		}
-
+		
 		userResponse = new ResponseEntity<BaseResponse<User>>(br, null, HttpStatus.OK);
 		return userResponse;
 
