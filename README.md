@@ -37,7 +37,9 @@ For example, open postman=> select POST method => type the above URL=> hit send 
 Open the following link from your web browser.  
 ```
 http://localhost:3000
-```
+```  
+*NOTE: Select date from Date picker according to start date to filter the records in table accordingly.  
+For example, FROM(start date) TO(start date)=> filter the records in table
 
 # CRUD
 To fetch all data, hit the following URL.  
